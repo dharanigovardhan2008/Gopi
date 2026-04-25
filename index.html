@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexusAI - Future of AI Agencies</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="grid-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">NEXUS<span>AI</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="glitch" data-text="THE FUTURE IS AI">THE FUTURE IS AI</h1>
+      <p class="subtitle">Cutting-edge AI solutions to transform your business</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary" id="bookCall">📞 Book a Call</button>
+        <button class="btn btn-secondary" id="bookProject">🚀 Book a Project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Chatbots</h3>
+        <p>Custom intelligent chatbots for your business</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧠</div>
+        <h3>Machine Learning</h3>
+        <p>ML models to predict and analyze data</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Automation</h3>
+        <p>Automate repetitive tasks with AI</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Data Analytics</h3>
+        <p>AI-powered insights from your data</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="about-text">We are a team of AI enthusiasts building the future. From neural networks to deep learning, we deliver world-class AI solutions tailored to your needs.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Ready to transform your business with AI?</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary" onclick="document.getElementById('bookCall').click()">Book a Call</button>
+      <button class="btn btn-secondary" onclick="document.getElementById('bookProject').click()">Start a Project</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 NexusAI. All rights reserved.</p>
+  </footer>
+
+  <!-- Project Booking Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal">
+      <span class="modal-close" id="closeModal">&times;</span>
+      <h2>🚀 Book Your Project</h2>
+      <form id="projectForm">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" name="name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Type of Project *</label>
+          <select name="projectType" required>
+            <option value="">Select project type</option>
+            <option value="AI Chatbot">AI Chatbot</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Automation">Automation</option>
+            <option value="Data Analytics">Data Analytics</option>
+            <option value="Custom AI Solution">Custom AI Solution</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Estimated Budget (₹) *</label>
+          <input type="number" name="budget" required placeholder="50000">
+        </div>
+        <div class="form-group">
+          <label>Estimated Completion Date *</label>
+          <input type="date" name="deadline" required>
+        </div>
+        <div class="form-group">
+          <label>Project Details *</label>
+          <textarea name="details" rows="4" required placeholder="Describe your project requirements..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" name="phone" required placeholder="+91 9494777869">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+      </form>
+      <div class="success-message" id="successMessage">
+        ✅ Your request has been sent successfully! We'll contact you soon.
+      </div>
+    </div>
+  </div>
+
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form-handler.js"></script>
+</body>
+</html>
